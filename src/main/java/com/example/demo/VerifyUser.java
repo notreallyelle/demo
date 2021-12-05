@@ -36,7 +36,7 @@ public class VerifyUser {
     }
 
     public boolean checkEmail() {
-        Pattern goodEmail = Pattern.compile("[a-zA-Z0-9][a-zA-Z0-9._]*@ [a-zA-Z0-9]+([.][a-zA-Z]+)+");
+        Pattern goodEmail = Pattern.compile("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$");  // "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$"
         Matcher matcher = goodEmail.matcher(this.email);
         return matcher.find();
     }

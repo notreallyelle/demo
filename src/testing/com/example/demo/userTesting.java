@@ -41,10 +41,10 @@ public class userTesting {
 
     @Test
     public void VerifyEmail(){
-        VerifyUser one = new VerifyUser("emailaddy@gmail.com", "password");
+        VerifyUser one = new VerifyUser("email12y@gmail.com", "password");
         VerifyUser two = new VerifyUser("notEmail", "password");
-        assertTrue(one.checkForLength());
-        assertFalse(two.checkForLength());
+        assertTrue(one.checkEmail());
+        assertFalse(two.checkEmail());
     }
 
 }
