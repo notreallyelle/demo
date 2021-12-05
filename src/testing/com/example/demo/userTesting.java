@@ -39,4 +39,12 @@ public class userTesting {
         assertFalse(two.checkForLength());
     }
 
+    @Test
+    public void VerifyEmail(){
+        VerifyUser one = new VerifyUser("emailaddy@gmail.com", "password");
+        VerifyUser two = new VerifyUser("notEmail", "password");
+        assertTrue(one.checkForLength());
+        assertFalse(two.checkForLength());
+    }
+
 }
