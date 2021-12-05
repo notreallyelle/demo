@@ -23,4 +23,11 @@ public class userTesting {
         assertFalse(two.checkForLetters());
     }
 
+    public void CheckPassForSpecialChars() {
+        VerifyUser one = new VerifyUser("email", "AbcDe12!#");
+        VerifyUser two = new VerifyUser("email", "122233AD");
+        assertTrue(one.checkForSpecialChars());
+        assertFalse(two.checkForSpecialChars());
+    }
+
 }
