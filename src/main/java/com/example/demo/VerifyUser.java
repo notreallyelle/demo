@@ -30,4 +30,8 @@ public class VerifyUser {
         Matcher matcher = specialChars.matcher(this.password);
         return matcher.find();
     }
+
+    public boolean checkForLength() {
+        return password.length() > 7;
+    }
 }
