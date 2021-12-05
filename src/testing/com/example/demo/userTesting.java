@@ -8,11 +8,19 @@ import org.junit.jupiter.api.Test;
 public class userTesting {
 
     @Test
-    public void CheckPassforDigits() {
+    public void CheckPassForDigits() {
         VerifyUser one = new VerifyUser("email", "AbcDe12!");
         VerifyUser two = new VerifyUser("email", "ABCDef!!");
         assertTrue(one.checkForDigits());
         assertFalse(two.checkForDigits());
+    }
+
+    @Test
+    public void CheckPassForLetters() {
+        VerifyUser one = new VerifyUser("email", "AbcDe12!");
+        VerifyUser two = new VerifyUser("email", "1222334!!");
+        assertTrue(one.checkForLetters());
+        assertFalse(two.checkForLetters());
     }
 
 }

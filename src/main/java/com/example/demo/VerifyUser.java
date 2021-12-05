@@ -15,13 +15,13 @@ public class VerifyUser {
 
     public boolean checkForDigits() {
         Pattern digits = Pattern.compile("[\\d]");
-        Matcher matcher = digits.matcher((CharSequence) password);
+        Matcher matcher = digits.matcher(this.password);
         return matcher.find();
     }
 
     public boolean checkForLetters() {
         Pattern chars = Pattern.compile("[a-z]");
-        Matcher matcher = chars.matcher((CharSequence) password);
+        Matcher matcher = chars.matcher(this.password);
         return matcher.find();
     }
 }
