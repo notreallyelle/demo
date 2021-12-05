@@ -34,4 +34,10 @@ public class VerifyUser {
     public boolean checkForLength() {
         return password.length() > 7;
     }
+
+    public boolean checkEmail() {
+        Pattern goodEmail = Pattern.compile("[a-zA-Z0-9][a-zA-Z0-9._]*@ [a-zA-Z0-9]+([.][a-zA-Z]+)+");
+        Matcher matcher = goodEmail.matcher(this.email);
+        return matcher.find();
+    }
 }
