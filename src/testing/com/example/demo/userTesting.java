@@ -31,4 +31,12 @@ public class userTesting {
         assertFalse(two.checkForSpecialChars());
     }
 
+    @Test
+    public void CheckPassLength() {
+        VerifyUser one = new VerifyUser("email", "AbcDe12!#2");
+        VerifyUser two = new VerifyUser("email", "1a!");
+        assertTrue(one.checkForLength());
+        assertFalse(two.checkForLength());
+    }
+
 }
