@@ -9,8 +9,8 @@ public class userTesting {
 
     @Test
     public void CheckPassforDigits() {
-        User one = new User("email", "AbcDe12!");
-        User two = new User("email", "ABCDef!!");
+        VerifyUser one = new VerifyUser("email", "AbcDe12!");
+        VerifyUser two = new VerifyUser("email", "ABCDef!!");
         assertTrue(one.checkForDigits());
         assertFalse(two.checkForDigits());
     }

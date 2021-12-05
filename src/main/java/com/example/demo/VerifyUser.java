@@ -5,10 +5,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class VerifyUser {
-    private Label email;
-    String userEmail = email.getText();
-    private Label password;
-    String userPass = password.getText();
+    private String email;
+    private String password;
+
+    public VerifyUser(String email, String password){
+        this.email = email;
+        this.password = password;
+    }
 
     public boolean checkForDigits() {
         Pattern digits = Pattern.compile("[\\d]");
