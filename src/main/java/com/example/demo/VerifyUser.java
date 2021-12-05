@@ -24,4 +24,10 @@ public class VerifyUser {
         Matcher matcher = chars.matcher(this.password);
         return matcher.find();
     }
+
+    public boolean checkForSpecialChars() {
+        Pattern specialChars = Pattern.compile("[*^&@!.]");
+        Matcher matcher = specialChars.matcher(this.password);
+        return matcher.find();
+    }
 }
