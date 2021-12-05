@@ -23,6 +23,7 @@ public class userTesting {
         assertFalse(two.checkForLetters());
     }
 
+    @Test
     public void CheckPassForSpecialChars() {
         VerifyUser one = new VerifyUser("email", "AbcDe12!#");
         VerifyUser two = new VerifyUser("email", "122233AD");
